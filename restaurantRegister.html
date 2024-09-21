@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Registration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://img.freepik.com/premium-photo/empty-wooden-table-with-blurred-restaurant-background_1028938-484025.jpg?w=740');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px; /* Reduced padding */
+            border-radius: 10px;
+            width: 350px; /* Slightly narrower */
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            color: #ffcc00;
+            margin-bottom: 10px; /* Reduced margin */
+        }
+        label {
+            font-size: 14px; /* Slightly smaller font */
+            font-weight: bold;
+            margin-bottom: 5px; /* Reduced margin */
+            display: block;
+        }
+        input[type="text"], input[type="number"], input[type="url"] {
+            width: 100%;
+            padding: 8px; /* Reduced padding */
+            margin: 8px 0; /* Reduced margin */
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px; /* Reduced padding */
+            background-color: #ff9900;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e68a00;
+        }
+        @media (max-width: 768px) {
+            .form-container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Register Your Restaurant</h2>
+        <form action="addRestaurant">
+            <label for="restaurantName">Restaurant Title</label>
+            <input type="text" id="restaurantName" name="restaurantName" placeholder="Enter restaurant name" required>
+
+            <label for="cuisineType">Cuisine Category</label>
+            <input type="text" id="cuisineType" name="cuisineType" placeholder="e.g. Italian, Chinese, Indian" required>
+
+            <label for="deliveryTime">Estimated Delivery Time (in minutes)</label>
+            <input type="number" id="deliveryTime" name="deliveryTime" placeholder="e.g. 30" required>
+
+            <label for="isActive">Status</label>
+            <input type="text" id="isActive" name="isActive" placeholder="Enter Status (true or false)" required>
+
+            <label for="rating">Customer Rating</label>
+            <input type="number" id="rating" name="rating" step="0.1" min="0" max="5" placeholder="e.g. 4.5" required>
+
+            <label for="imgPath">Restaurant Image (URL)</label>
+            <input type="url" id="imgPath" name="imgPath" placeholder="https://example.com/image.jpg" required>
+
+            <button type="submit">Register Restaurant</button>
+        </form>
+    </div>
+
+</body>
+</html>
